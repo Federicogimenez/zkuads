@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./assets/css/style/style.css">
+    <title>log in email</title>
+</head>
+<body>
+    <div class="portrait-container">
+        <div class="bg-login">
+            <a class="login-back-icon" href="./login-welcome.html">
+                <img src="./assets/img/assets/svg/header_icon_arrow.svg" width="25px" alt="back">
+            </a>
+            <img class="login-logo m-auto-center" src="./assets/img/assets/png/zkuads-logo.png" alt="zkuads-logo">
+            <form class="form-1">
+                <h2 class="heading heading__2">log in with your email</h2>
+
+                <div class="input-container">
+                    <div class="input-1">
+                        <div class="input-1__icon">
+                            <img width="35px" src="./assets/img/assets/svg/login_icon_box_mail.svg" alt="user">
+                        </div>
+                        <input 
+                            class="input-1__text c-gray"
+                            type="email"
+                            placeholder="Email"
+                        >
+                    </div>
+                    <div class="error-validation">please enter a valid email</div>
+                </div>
+                <div class="input-container">
+                    <div class="input-1">
+                        <div class="input-1__icon">
+                            <img width="35px" src="./assets/img/assets/svg/login_icon_box_password.svg" alt="user">
+                        </div>
+                        <input 
+                            class="input-1__text c-gray"
+                            type="password"
+                            placeholder="Password"
+                        >
+                    </div>
+                    <div class="error-validation d-none">Error validation</div>
+                </div>
+                <div class="rememberme-container">
+                    <div class="remember-psw-box">
+                        <input class="d-none" type="checkbox" name="rememberme" id="rememberme">
+                        <label class="rememberme-label" for="rememberme">
+                            <span class="check-box-span"></span>
+                            Remember me
+                        </label>
+                    </div>
+                    <a href="#" class="forgot-psw-box">Forgot password?</a>
+                </div>
+
+                <button type="submit" class="log-in-btn bg-purple">log in</button>
+            </form>
+            <div class="login-have-account">Create a new account? <a href="./login-new-account.html">Sign in</a></div>
+
+        </div>
+    </div>
+</body>
+</html>

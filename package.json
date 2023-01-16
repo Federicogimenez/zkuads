@@ -1,0 +1,21 @@
+{
+  "name": "zkuads",
+  "version": "1.0.0",
+  "description": "front mock-up for zkuads",
+  "main": "index.js",
+  "scripts": {
+    "watch:sass": "node-sass assets/sass/main.scss assets/css/style/style.css -w",
+    "devserver":"live-server",
+    "start":"npm-run-all --parallel devserver watch:sass"
+  },
+  "author": "federico gimenez",
+  "license": "ISC",
+  "devDependencies": {
+    "node-sass": "^8.0.0",
+    "autoprefixer": "^10.4.0",
+    "concat": "^1.0.3",
+    "npm-run-all": "^4.1.5",
+    "postcss": "^8.3.11",
+    "postcss-cli": "^9.0.1"
+  }
+}
