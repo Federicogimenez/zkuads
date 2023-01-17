@@ -10,36 +10,38 @@
 <body>
     <div class="portrait-container">
         <div class="bg-dark">
-            <div class="topbar bg-orange-blur">
-                <a class="topbar__back" href="#">
-                    <img class="topbar__back--img" src="./assets/img/assets/svg/header_icon_arrow.svg" alt="back">
-                </a>
-                <div class="topbar__switch-btn">
-                    <img
-                        class="topbar__switch-btn--img"
-                        src="./assets/img/assets/svg/header_switch_coins.svg" 
-                        alt="coins" >
-                    <img
-                        class="topbar__switch-btn--img d-none"
-                        src="./assets/img/assets/svg/header_switch_diamonds.svg" 
-                        alt="diamond">
-                </div>
-                <div class="topbar__cash-mode">
-                    <div class="topbar__cash-mode--box">
-                        <img class="topbar__cash-mode--img" src="./assets/img/assets/svg/icon_coin.svg" alt="coin">
-                        <span class="topbar__cash-mode--value">1,5</span>
+            <div class="topbar__container">
+                <div class="topbar bg-orange-blur">
+                    <a class="topbar__back" href="#">
+                        <img class="topbar__back--img" src="./assets/img/assets/svg/header_icon_arrow.svg" alt="back">
+                    </a>
+                    <div class="topbar__switch-btn">
+                        <img
+                            class="topbar__switch-btn--img"
+                            src="./assets/img/assets/svg/header_switch_coins.svg" 
+                            alt="coins" >
+                        <img
+                            class="topbar__switch-btn--img d-none"
+                            src="./assets/img/assets/svg/header_switch_diamonds.svg" 
+                            alt="diamond">
                     </div>
-                    <div class="topbar__cash-mode--box d-none">
-                        <img class="topbar__cash-mode--img" src="./assets/img/assets/svg/header_icon_powCoin.svg" alt="powcoin">
-                        <span class="topbar__cash-mode--value">1,5</span>
+                    <div class="topbar__cash-mode">
+                        <div class="topbar__cash-mode--box">
+                            <img class="topbar__cash-mode--img" src="./assets/img/assets/svg/icon_coin.svg" alt="coin">
+                            <span class="topbar__cash-mode--value">1,5</span>
+                        </div>
+                        <div class="topbar__cash-mode--box d-none">
+                            <img class="topbar__cash-mode--img" src="./assets/img/assets/svg/header_icon_powCoin.svg" alt="powcoin">
+                            <span class="topbar__cash-mode--value">1,5</span>
+                        </div>
                     </div>
-                </div>
-                <div class="topbar__pow-coin">
-                    <img class="topbar__pow-coin--img" src="./assets/img/assets/svg/header_icon_powCoin.svg" alt="">
-                    <span class="topbar__pow-coin--value">100</span>
-                </div>
-                <div class="topbar__user">
-                    <img class="topbar__user--img" src="./assets/img/assets/png/player-1.png" alt="">
+                    <div class="topbar__pow-coin">
+                        <img class="topbar__pow-coin--img" src="./assets/img/assets/svg/header_icon_powCoin.svg" alt="">
+                        <span class="topbar__pow-coin--value">100</span>
+                    </div>
+                    <div class="topbar__user">
+                        <img class="topbar__user--img" src="./assets/img/assets/png/player-1.png" alt="">
+                    </div>
                 </div>
             </div>
             <h3 class="heading heading__3">tournaments</h3>
@@ -151,37 +153,47 @@
                     </div>
                 </div>
             </div>
-            <div class="daily-quest">
-                <div class="daily-quest__top-box">
-                    <div class="daily-quest__top-box--bonus">
-                        <img src="./assets/img/assets/svg/icon_diamond.svg" alt="diamond">
-                        <span>10</span>
-                    </div>
-                    <div class="daily-quest__top-box--title">
-                        <h3 class="heading heading__3">daily quest</h3>
-                    </div>
-                    <div class="daily-quest__top-box--time">
-                        <span>00</span>:
-                        <span>15</span>:
-                        <span>40</span>
-                    </div>
-                </div>
-                <div class="daily-quest__bottom-box">
-                    <div class="daily-quest__bottom-box--tournament bg-tournament">
-                        <div class="daily-quest__bottom-box--tournament-text">
-                            play a <br>
-                            tournament
+            <div class="daily-quest__container">
+                <div class="daily-quest">
+                    <div class="daily-quest__top-box">
+                        <div class="daily-quest__top-box--bonus">
+                            <img src="./assets/img/assets/svg/icon_diamond.svg" alt="diamond">
+                            <span>10</span>
                         </div>
-                        <div class="daily-quest__bottom-box--tournament-bar">
-                            <span>0/1</span>
-                            <span></span>
+                        <div class="daily-quest__top-box--title">
+                            <h3 class="heading heading__3">daily quest</h3>
+                        </div>
+                        <div class="daily-quest__top-box--time">
+                            <span>00</span>:
+                            <span>15</span>:
+                            <span>40</span>
                         </div>
                     </div>
-                    <div class="daily-quest__bottom-box--tournament bg-tournament">
-                        <div class="daily-quest__bottom-box--tournament-text">win 3 <br>tournament</div>
-                        <div class="daily-quest__bottom-box--tournament-bar">
-                            <span>3/3</span>
-                            <span></span>
+                    <div class="daily-quest__bottom-box">
+                        <div class="daily-quest__bottom-box--tournament bg-tournament">
+                            <div class="daily-quest__bottom-box--tournament-text">
+                                play a <br>
+                                tournament
+                            </div>
+                            <div class="daily-quest__bottom-box--tournament-bar">
+                                <span>0/1</span>
+                                <span class="daily-quest__bottom-box--tournament-gray-bar">
+                                    <span class="daily-quest__bottom-box--tournament-yellow-bar width-bar__play-a-tournament">
+                                        <!-- class width-bar define bar progress - it is on utilities classes -->
+                                    </span>
+                                </span>
+                            </div>
+                        </div>
+                        <div class="daily-quest__bottom-box--tournament bg-tournament">
+                            <div class="daily-quest__bottom-box--tournament-text">win 3 <br>tournament</div>
+                            <div class="daily-quest__bottom-box--tournament-bar">
+                                <span>3/3</span>
+                                <span class="daily-quest__bottom-box--tournament-gray-bar">
+                                    <span class="daily-quest__bottom-box--tournament-yellow-bar width-bar__win-three-tournament">
+                                        <!-- class width-bar define bar progress - it is on utilities classes -->
+                                    </span>
+                                </span>
+                            </div>
                         </div>
                     </div>
                 </div>

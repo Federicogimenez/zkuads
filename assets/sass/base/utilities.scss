@@ -51,3 +51,9 @@
 
 .mr-auto{margin-right: auto;}
 
+
+// bar progress utilities classes
+.width-bar{
+    &__play-a-tournament{width: 5%;}
+    &__win-three-tournament{width: 100%;}
+}
