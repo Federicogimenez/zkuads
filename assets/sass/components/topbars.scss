@@ -2,6 +2,7 @@
     width: 100%;
     height: fit-content;
     padding: .5rem 1rem;
+    padding-top: 0;
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -13,6 +14,8 @@
         width: 100%;
         padding: 1rem;
         margin-bottom: 2rem;
+        position: relative;
+        z-index: 999;
     }
 
     &__back{
@@ -23,7 +26,7 @@
         }
     }
     &__switch-btn{
-        display: inline-block;
+        display: flex;
         &--img{
             height: 2.5rem;
         }
