@@ -33,20 +33,23 @@
   text-align: center;
   width: 100%;
   text-transform: uppercase;
+  text-shadow: 4px 3px 2px rgba(20, 20, 20, 0.795);
   letter-spacing: 3px; }
   .heading__1 {
-    font-size: 3rem;
+    font-size: 1.4rem;
     color: #ffffff; }
+    .heading__1--cap {
+      text-transform: capitalize; }
   .heading__2 {
     font-size: 1.6rem;
     color: #ffffff;
-    text-shadow: 4px 3px 2px rgba(20, 20, 20, 0.795);
     margin: 2.5rem 0; }
   .heading__3 {
     font-size: 1.8rem;
     color: #ffce24;
-    text-shadow: 4px 3px 2px rgba(20, 20, 20, 0.795);
     margin: 1.5rem 0; }
+    .heading__3--cap {
+      text-transform: capitalize; }
 
 @media screen and (min-width: 0px) {
   html {
@@ -138,6 +141,12 @@ a {
 .bg-play-diamond {
   background-image: linear-gradient(to right, #e9345b, #951b81); }
 
+.bg-circle-oranyellow {
+  background-image: linear-gradient(45deg, #ff6424 30%, #ffbf24 80%); }
+
+.bg-circle-viopink {
+  background-image: linear-gradient(45deg, #951b81 30%, #ff375f 80%); }
+
 .disabled {
   opacity: .6 !important; }
 
@@ -147,8 +156,17 @@ a {
 .border-light-white {
   border: 1px solid #5f5f5f; }
 
+.border-coin-box {
+  border: 2px solid #ffce24; }
+
+.border-diamond-box {
+  border: 2px solid #701b62d3; }
+
 .c-white {
-  color: #fff; }
+  color: #fff !important; }
+
+.c-red {
+  color: #ff3963 !important; }
 
 .c-gray {
   color: #2b2b2b; }
@@ -161,6 +179,9 @@ a {
 
 .mr-auto {
   margin-right: auto; }
+
+.ml-10 {
+  margin-left: 5px; }
 
 .width-bar__play-a-tournament {
   width: 5%; }
@@ -342,7 +363,9 @@ a {
     position: relative;
     z-index: 999; }
   .topbar__back {
-    margin-right: 10px; }
+    margin-right: 10px;
+    display: flex;
+    align-items: center; }
     .topbar__back--img {
       width: 2.5rem; }
   .topbar__switch-btn {
@@ -780,6 +803,35 @@ a {
       font-size: 1.5;
       text-transform: capitalize; }
 
+.radio-label {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 96%;
+  margin: 2rem auto; }
+  .radio-label label {
+    flex: 1 0 0;
+    padding: 1rem;
+    border-bottom: 2px solid transparent;
+    font-size: 1.6rem;
+    font-family: "Quicksand Medium";
+    color: #fff;
+    text-align: center;
+    text-transform: capitalize;
+    cursor: pointer;
+    transition: all .3s ease-out; }
+  .radio-label input {
+    display: none; }
+
+input.radio-option-1[type="radio"]:checked ~ .label-option-1 {
+  border-bottom: 2px solid #ffce24; }
+
+input.radio-option-2[type="radio"]:checked ~ .label-option-2 {
+  border-bottom: 2px solid #ffce24; }
+
+input.radio-option-3[type="radio"]:checked ~ .label-option-3 {
+  border-bottom: 2px solid #ffce24; }
+
 .bg-login {
   background-image: url(./../../img/assets/png/backgrounds/bg_welcome_login.png);
   background-size: cover;
@@ -960,6 +1012,288 @@ a {
       left: 0;
       height: 100%;
       background-color: #ffce24; }
+
+.profile__img {
+  display: flex;
+  align-items: center;
+  position: relative;
+  margin: 0 auto;
+  border-radius: 50%;
+  border: 4px solid #ff6424;
+  width: 60vw;
+  height: 60vw;
+  min-width: 200px;
+  max-width: 300px;
+  max-height: 300px;
+  min-height: 200px; }
+  .profile__img img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 50%; }
+  .profile__img--edit-box {
+    position: absolute;
+    right: 0px;
+    border-radius: 50%;
+    width: 3rem;
+    height: 3rem;
+    background-image: linear-gradient(124deg, #ff6424, #ffbf24 77%);
+    transform: translateX(50%);
+    display: flex;
+    justify-content: center;
+    align-items: center; }
+    .profile__img--edit-box img {
+      width: 2rem;
+      height: 2rem; }
+
+.profile__name {
+  display: flex;
+  align-items: center;
+  width: fit-content;
+  margin: 3rem auto;
+  color: #fff;
+  font-family: "Quicksand Semibold";
+  font-size: 2rem;
+  text-shadow: 4px 3px 2px rgba(20, 20, 20, 0.795);
+  position: relative;
+  text-transform: capitalize; }
+  .profile__name button {
+    position: absolute;
+    right: 0;
+    transform: translateX(200%);
+    border: none;
+    background: transparent; }
+    .profile__name button img {
+      width: 2rem;
+      height: 2rem; }
+
+.profile__wallet-btn {
+  width: 95%;
+  border: 2px solid #ff6424;
+  background-color: transparent;
+  padding: 1rem 0rem 1rem 1rem;
+  border-radius: .7rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin: 1.5rem auto;
+  box-shadow: -3px 3px 9px rgba(0, 0, 0, 0.6);
+  transition: all .3s; }
+  .profile__wallet-btn:active {
+    background-color: #ff6424; }
+  .profile__wallet-btn--icon {
+    display: inline-block;
+    width: 4rem;
+    margin-right: .5rem; }
+  .profile__wallet-btn--title {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    flex: 1 0 0;
+    font-size: 2.5rem;
+    font-family: "Quicksand Bold";
+    color: #fff; }
+  .profile__wallet-btn--arrow {
+    padding: 0 5px;
+    border-left: 1px solid #fff; }
+    .profile__wallet-btn--arrow img {
+      width: 2.5rem;
+      transform: rotate(-90deg); }
+
+.profile__invite {
+  width: 95%;
+  margin: 1rem auto;
+  padding: 3rem;
+  padding-top: 1.5rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  border-radius: 7px;
+  box-shadow: -3px 3px 9px rgba(0, 0, 0, 0.6);
+  border: 2px solid #951b81; }
+  .profile__invite--p {
+    margin: 2rem 0;
+    margin-bottom: 4rem;
+    text-align: center;
+    color: #fff;
+    font-size: 2rem;
+    font-family: "Quicksand Semibold";
+    line-height: 1.8;
+    text-shadow: 4px 3px 2px rgba(20, 20, 20, 0.795); }
+    .profile__invite--p::first-letter {
+      text-transform: uppercase; }
+    .profile__invite--p img {
+      width: 2rem;
+      transform: translateY(4px); }
+  .profile__invite--btn {
+    border-radius: 7px;
+    width: 100%;
+    padding: 1.8rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #fff;
+    font-size: 1.7rem;
+    font-family: "Quicksand Semibold";
+    background-image: linear-gradient(to right, #e9345b, #951b81);
+    border: none; }
+    .profile__invite--btn img {
+      display: inline-block;
+      width: 2rem;
+      margin-right: 7px; }
+
+.profile__code-box {
+  width: 100%;
+  margin: 1rem auto;
+  margin-top: 3rem;
+  padding: 1rem 2rem;
+  border-radius: 7px;
+  background-color: #191a1a;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: center;
+  position: relative; }
+  .profile__code-box--legend {
+    color: #878787;
+    font-size: 1.6rem;
+    font-family: "Quicksand Medium";
+    margin-bottom: 3px; }
+  .profile__code-box--code {
+    color: #fff;
+    font-size: 1.8rem;
+    font-family: "Quicksand Semibold";
+    text-transform: capitalize; }
+  .profile__code-box img {
+    position: absolute;
+    display: inline-block;
+    width: 4rem;
+    right: 10px; }
+
+.wallet-status {
+  width: 96%;
+  margin: 0 auto;
+  height: 19rem;
+  padding: 2rem;
+  border-radius: 12px;
+  background-color: #3c3c3b;
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column; }
+  .wallet-status__balance {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 2rem auto; }
+    .wallet-status__balance img {
+      width: 6rem;
+      height: 6rem;
+      margin-right: 1rem; }
+    .wallet-status__balance span {
+      font-family: "Russo One";
+      text-transform: uppercase;
+      text-shadow: 4px 3px 2px rgba(20, 20, 20, 0.795);
+      letter-spacing: 3px;
+      color: #ffce24;
+      font-size: 5rem; }
+
+.wallet-status__info-advices:focus .wallet-status__info-advices--msg {
+  opacity: 1;
+  transform: translateX(-108%) translateY(-50%); }
+
+.wallet-payment {
+  display: flex;
+  width: 95%;
+  justify-content: center;
+  align-items: center;
+  padding: 6rem 0; }
+  .wallet-payment__item {
+    width: 28%;
+    min-width: 4rem;
+    max-width: 10rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center; }
+    .wallet-payment__item:not(:last-child) {
+      margin-right: 1.5rem; }
+    .wallet-payment__item button {
+      border: none;
+      border-radius: 50%;
+      padding: 2rem;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      margin-bottom: 1rem; }
+      .wallet-payment__item button img {
+        width: 9.2vw;
+        max-width: 3.5rem; }
+  .wallet-payment span {
+    font-size: 1.2rem;
+    color: #fff;
+    text-transform: uppercase;
+    font-family: "Quicksand Light"; }
+
+.items-list {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  padding: 1.5rem; }
+  .items-list__item {
+    width: 100%;
+    border-radius: 1.2rem;
+    background-color: #191a1a;
+    display: flex;
+    align-items: flex-start;
+    justify-content: center;
+    padding: 1rem;
+    margin-bottom: 1.5rem;
+    min-height: 10rem; }
+    .items-list__item > *:not(:last-child) {
+      margin-right: 1rem; }
+    .items-list__item--img-box {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      border-radius: 50%;
+      width: 3rem;
+      height: 3rem;
+      background-color: #00cccc;
+      margin-right: 1rem; }
+      .items-list__item--img-box img {
+        width: 3rem; }
+    .items-list__item--text-box {
+      flex: 2 0 0; }
+      .items-list__item--text-box > * {
+        margin-bottom: .5rem;
+        font-family: "Quicksand Medium"; }
+      .items-list__item--text-box h6 {
+        font-size: 1.5rem;
+        color: #fff;
+        text-transform: capitalize; }
+      .items-list__item--text-box span {
+        display: inline-block;
+        text-transform: capitalize;
+        font-size: 1.3rem; }
+      .items-list__item--text-box div {
+        font-size: 1.3rem;
+        text-transform: capitalize;
+        color: #949493; }
+    .items-list__item--succes {
+      color: #00cccc; }
+    .items-list__item--failed {
+      color: #ff3963; }
+    .items-list__item--price {
+      font-size: 1.6rem;
+      font-family: "Quicksand Semibold";
+      width: max-content;
+      color: #fff;
+      flex: 1 0 0; }
 
 .game-header {
   position: absolute;
